@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Turno {
+  id        Int      @id @default(autoincrement())
+  nombre    String
+  apellido  String
+  telefono  String
+  fecha     DateTime
+  horario   String
+  createdAt DateTime @default(now())
+}

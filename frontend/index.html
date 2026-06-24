@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turnos - Barbería</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <img src="img/logo.png" alt="Logo barbería" class="logo-header" />
+  <h1>Gestión de Turnos</h1>
+
+  <section id="formulario-section">
+    <h2>Nuevo turno</h2>
+    <form id="formulario-turno">
+        <input type="hidden" id="turno-id" value="" />
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required />
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required />
+
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" required />
+
+      <label for="horario">Horario:</label>
+      <select id="horario" name="horario" required>
+        <option value="">Seleccionar horario</option>
+        <option value="09:00">09:00</option>
+        <option value="09:30">09:30</option>
+        <option value="10:00">10:00</option>
+        <option value="10:30">10:30</option>
+        <option value="11:00">11:00</option>
+        <option value="11:30">11:30</option>
+        <option value="16:00">16:00</option>
+        <option value="16:30">16:30</option>
+        <option value="17:00">17:00</option>
+        <option value="17:30">17:30</option>
+        <option value="18:00">18:00</option>
+        <option value="18:30">18:30</option>
+      </select>
+
+      <button type="submit" id="btn-submit">Crear turno</button>
+    </form>
+  </section>
+
+  <section id="lista-section">
+    <h2>Turnos agendados</h2>
+    <table id="tabla-turnos">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Teléfono</th>
+          <th>Fecha</th>
+          <th>Horario</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpo-tabla-turnos">
+        <!-- Las filas se generan dinámicamente con JS -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
